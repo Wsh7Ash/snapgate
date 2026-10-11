@@ -1,0 +1,4 @@
+report for deploy (mode=safe)
+build <HASH> at <TIMESTAMP>
+run id <UUID>
+completed in <DUR>

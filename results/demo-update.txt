@@ -1,0 +1,5 @@
+OK   default-report  snapshot already current
+OK   safe-mode       snapshot already current
+OK   failure-path    snapshot already current
+
+3 case(s): 3 unchanged

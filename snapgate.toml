@@ -1,0 +1,35 @@
+# Dogfood configuration: snapgate validates its own committed snapshots.
+# Every case prints values that change between runs; the normalizer chain
+# must scrub them so `snapgate run` stays green on every machine.
+
+[run]
+snapshot_dir = "snapshots"
+timeout = 15
+use_builtins = true
+
+[[case]]
+name = "stable-hello"
+command = ["python", "-c", "print('snapgate dogfood ok')"]
+
+[[case]]
+name = "noisy-output"
+command = ["python", "examples/dogfood_noisy.py"]
+
+[[case]]
+name = "stderr-and-exit"
+command = ["python", "-c", "import sys;sys.stderr.write('warn: harmless\\n');sys.exit(3)"]
+
+[[case]]
+name = "stdin-roundtrip"
+command = ["python", "-c", "import sys;print(sys.stdin.read().split()[0][::-1])"]
+stdin = "regex\n"
+
+[[case]]
+name = "matrix-args"
+command = ["python", "-c", "import sys;print('mode', sys.argv[1])"]
+matrix = [["--fast"], ["--safe"]]
+
+[[normalizer]]
+name = "build-id"
+pattern = "v\\d+\\.\\d+\\.\\d+"
+replace = "v<BUILD>"

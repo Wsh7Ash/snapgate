@@ -1,0 +1,5 @@
+PASS default-report  0.69s
+PASS safe-mode       1.62s
+PASS failure-path    1.54s
+
+3 case(s): 3 pass

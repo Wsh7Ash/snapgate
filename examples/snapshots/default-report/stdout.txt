@@ -1,0 +1,4 @@
+report for world (mode=fast)
+build <HASH> at <TIMESTAMP>
+run id <UUID>
+completed in <DUR>

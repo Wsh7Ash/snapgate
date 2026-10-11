@@ -1,0 +1,12 @@
+FAIL default-report  output differs from snapshot
+--- snapshots/stdout.txt
++++ actual/stdout.txt
+@@ -1,4 +1,4 @@
+-report for everybody (mode=fast)
++report for world (mode=fast)
+ build <HASH> at <TIMESTAMP>
+ run id <UUID>
+ completed in <DUR>
+
+1 case(s): 1 fail
+hint: run `snapgate run --update` to accept the new output

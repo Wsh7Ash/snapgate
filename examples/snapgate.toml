@@ -1,0 +1,21 @@
+# Example configuration for snapgate. Run from the repository root:
+#
+#   $env:PYTHONPATH="src"; python -m snapgate run -c examples/snapgate.toml
+#
+# Add --update the first time to create examples/snapshots/.
+
+[run]
+snapshot_dir = "snapshots"
+timeout = 10
+
+[[case]]
+name = "default-report"
+command = ["python", "sample_cli.py"]
+
+[[case]]
+name = "safe-mode"
+command = ["python", "sample_cli.py", "--mode", "safe", "deploy"]
+
+[[case]]
+name = "failure-path"
+command = ["python", "sample_cli.py", "boom"]

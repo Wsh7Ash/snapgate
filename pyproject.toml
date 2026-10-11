@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snapgate"
+version = "0.1.0"
+description = "Language-agnostic snapshot (golden file) test runner with output normalizers."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "snapgate contributors" }]
+keywords = ["testing", "snapshot", "golden-file", "regression", "cli"]
+dependencies = []
+
+[project.scripts]
+snapgate = "snapgate.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

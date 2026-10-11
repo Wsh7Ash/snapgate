@@ -1,0 +1,17 @@
+[
+  {
+    "name": "default-report",
+    "reason": "1.23s",
+    "status": "pass"
+  },
+  {
+    "name": "safe-mode",
+    "reason": "0.79s",
+    "status": "pass"
+  },
+  {
+    "name": "failure-path",
+    "reason": "0.49s",
+    "status": "pass"
+  }
+]

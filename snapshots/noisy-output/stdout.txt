@@ -1,0 +1,8 @@
+generated <TIMESTAMP>
+epoch <EPOCH>
+pid <PID>
+uid <UUID>
+cache <PATH>
+elapsed <DUR>
+digest <HASH>
+build v<BUILD> ready
